@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+        integrity="sha256-9mbkOfVho3ZPXfM7W8sV2SndrGDuh7wuyLjtsWeTI1Q=" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"
+        integrity="sha256-t8GepnyPmw9t+foMh3mKNvcorqNHamSKtKRxxpUEgFI=" crossorigin="anonymous"></script>
+
+    <title>Socket.io Chat App</title>
+    <style>
+        body {
+            background-color: rgba(0, 0, 0, 0.825);
+            color: white !important;
+        }
+
+        form {
+            bottom: 0;
+            position: fixed;
+            min-width: 100%;
+        }
+
+        label{
+            background-color: brown !important;
+        }
+
+        button {
+            color: white !important;
+        }
+
+        #messages {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #messages li {
+            padding: 5px 10px;
+            background: rgb(63, 61, 61);
+        }
+
+        #messages li:nth-child(odd) {
+            background: rgb(94, 90, 90);
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="ui basic modal">
+        <div class="ui icon header">
+            <i class="user secret icon"></i>
+            ENTER YOUR USERNAME
+        </div>
+        <div class="ui inverted segment">
+            <div class="ui fluid inverted transparent icon input">
+                <input type="text" class="username" placeholder="Enter your username">
+                <i class="user outline big icon"></i>
+            </div>
+        </div>
+        <div class="actions">
+            <div class="ui green ok inverted button">
+                <i class="checkmark icon"></i>
+                Done
+            </div>
+        </div>
+    </div>
+
+    <h1>Socket.IO -- Chat App</h1>
+
+    <div id="messages"></div>
+        
+    
+    <form action="">
+        <div class="ui labeled inverted segment fluid action input">
+            <div class="ui label"> username </div>
+            <input type="text" id="inputMessage" placeholder="Enter your message">
+            <button class="ui large inverted secondary button">SEND</button>
+        </div>
+    </form>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/main.js"></script>
+
+</body>
+
+</html>
