@@ -3,18 +3,13 @@
   "version": "0.0.1",
   "description": "my first socket.io web app",
   "dependencies": {
-    "express": "^4.15.2",
+    "express": "^4.17.1",
     "socket.io": "^2.3.0"
   },
-  "scripts": 
-  {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "main": "index.js",
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "main": "index.js",
+    "scripts": {
+	"start": "node index.js"	    
   },
   "repository": {
     "type": "git",
